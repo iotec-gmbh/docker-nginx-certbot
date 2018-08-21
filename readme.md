@@ -7,5 +7,5 @@ $ docker run --name http-proxy \
   -e DOMAIN=example.com \
   -e CLOUDFLARE_ACCOUNT=cloudflare@example.com \
   -e CLOUDFLARE_API_KEY=123 \
-  lkiesow/docker-nginx-certbot
+  iotec/docker-nginx-certbot
 ```
