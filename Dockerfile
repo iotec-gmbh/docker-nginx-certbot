@@ -3,6 +3,7 @@ MAINTAINER Lars Kiesow <lkiesow@uos.de>
 
 # Install certbot and cloudflare plugin
 RUN apk --update add \
+   coreutils \
    gcc \
    musl-dev \
    nginx \
