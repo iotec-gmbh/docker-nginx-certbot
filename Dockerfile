@@ -29,12 +29,12 @@ RUN chmod 600 /etc/letsencrypt/dnscloudflare.ini
 ADD cli.ini /etc/letsencrypt/cli.ini
 
 # Add start script
-ADD run.sh /opt/run
-RUN chmod 755 /opt/run
+ADD run.sh /opt/bin/run
+RUN chmod 755 /opt/bin/run
 
 # Nginx setup
 RUN mkdir -p /run/nginx
 
 EXPOSE 80
 
-CMD ["/opt/run"]
+CMD ["/opt/bin/run"]
