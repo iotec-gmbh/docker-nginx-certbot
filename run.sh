@@ -34,7 +34,7 @@ while true; do
   if [ "$days_to_expire" -lt 7 ]; then
     # Get certificate (allowed to fail)
     certbot certonly -d "${DOMAIN}" -d "*.${DOMAIN}" --dns-cloudflare \
-      --agree-tos --email "$EMAIL" || :
+      --non-interactive --agree-tos --email "$EMAIL" || :
 
     # Launch nginx
     if [ -f "${CERT}" ]; then
