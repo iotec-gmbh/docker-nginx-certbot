@@ -4,6 +4,9 @@ Nginx/Certbot based HTTP proxy container
 [![Quay build status](https://quay.io/repository/iotec-gmbh/nginx-certbot/status)
 ](https://quay.io/repository/iotec-gmbh/nginx-certbot?tab=builds)
 
+[![Travis build status](https://travis-ci.com/iotec-gmbh/docker-nginx-certbot.svg?branch=master)
+](https://travis-ci.com/iotec-gmbh/docker-nginx-certbot)
+
 Docker container to automatically obtain wildcard certificates for a set of
 domains which can be used in Nginx. [Iotec](https://iotec-gmbh.de) uses this as
 primary HTTP proxy for several web-services.
