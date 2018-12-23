@@ -5,18 +5,21 @@ MAINTAINER Lars Kiesow <lkiesow@uos.de>
 RUN apk --update add \
    coreutils \
    gcc \
+   libffi \
+   libffi-dev \
    musl-dev \
    nginx \
    openssl \
    openssl-dev \
-   py3-cffi \
    python3 \
    python3-dev
-RUN pip3 install \
-   certbot \
-   certbot-dns-cloudflare
+RUN pip3 install --upgrade pip \
+   && pip3 install \
+      certbot \
+      certbot-dns-cloudflare
 RUN apk del \
    gcc \
+   libffi-dev \
    musl-dev \
    openssl-dev \
    python3-dev
