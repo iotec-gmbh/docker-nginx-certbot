@@ -53,7 +53,7 @@ while true; do
       days_to_expire=$(((end_epoch - now_epoch) / 86400))
     fi
 
-    if [ "$days_to_expire" -lt 7 ]; then
+    if [ "$days_to_expire" -lt 30 ]; then
       # Get certificate (allowed to fail)
       certbot certonly -d "${domain}" -d "*.${domain}" --dns-cloudflare \
         --non-interactive --agree-tos --email "$EMAIL" || :
