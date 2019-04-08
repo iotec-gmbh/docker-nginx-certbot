@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Lars Kiesow <lkiesow@uos.de>
 
 # Install certbot and cloudflare plugin
-RUN apk --update add \
+RUN apk --no-cache add \
    coreutils \
    gcc \
    libffi \
@@ -13,11 +13,11 @@ RUN apk --update add \
    openssl-dev \
    python3 \
    python3-dev
-RUN pip3 install --upgrade pip \
-   && pip3 install \
+RUN pip3 install --no-cache-dir --upgrade pip \
+   && pip3 install --no-cache-dir \
       certbot \
       certbot-dns-cloudflare
-RUN apk del \
+RUN apk --no-cache del \
    gcc \
    libffi-dev \
    musl-dev \
