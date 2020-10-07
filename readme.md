@@ -23,7 +23,7 @@ $ docker run --name http-proxy \
 
 Parameters description:
 
-- ´EMAIL´: Email address used for Let's Encrypt registration. This is used to
+- `EMAIL`: Email address used for Let's Encrypt registration. This is used to
   send certificate expiration warnings in case something went wrong.
 - `DOMAINS`: Comma separated list of domains to get a (wildcard) certificate
   for.
