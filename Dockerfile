@@ -3,27 +3,28 @@ MAINTAINER Lars Kiesow <lkiesow@uos.de>
 
 # Install certbot and cloudflare plugin
 RUN apk --no-cache add \
-   coreutils \
-   gcc \
-   libffi \
-   libffi-dev \
-   musl-dev \
-   nginx \
-   openssl \
-   openssl-dev \
-   python3 \
-   python3-dev \
-   py3-pip
-RUN pip3 install --no-cache-dir --upgrade pip \
-   && pip3 install --no-cache-dir \
-      certbot \
-      certbot-dns-cloudflare
+    coreutils \
+    gcc \
+    libffi \
+    libffi-dev \
+    musl-dev \
+    nginx \
+    openssl \
+    openssl-dev \
+    python3 \
+    python3-dev \
+    py3-pip \ 
+    py3-virtualenv
+RUN pip3 install --no-cache-dir --break-system-packages --upgrade pip \
+    && pip3 install --no-cache-dir --break-system-packages \
+    certbot \
+    certbot-dns-cloudflare
 RUN apk --no-cache del \
-   gcc \
-   libffi-dev \
-   musl-dev \
-   openssl-dev \
-   python3-dev
+    gcc \
+    libffi-dev \
+    musl-dev \
+    openssl-dev \
+    python3-dev
 
 # Prepare cloudflare configuration
 RUN mkdir /etc/letsencrypt/
