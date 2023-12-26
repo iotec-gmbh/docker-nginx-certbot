@@ -5,8 +5,7 @@ Nginx/Certbot based HTTP proxy container
 ](https://quay.io/repository/iotec-gmbh/nginx-certbot?tab=builds)
 
 Docker container to automatically obtain wildcard certificates for a set of
-domains which can be used in Nginx. [Iotec](https://iotec-gmbh.de) uses this as
-primary HTTP proxy for several web-services.
+domains which can be used in Nginx.
 
 ```bash
 $ docker run --name http-proxy \
@@ -14,7 +13,7 @@ $ docker run --name http-proxy \
   -e DOMAINS=example.com \
   -e CLOUDFLARE_ACCOUNT=cloudflare@example.com \
   -e CLOUDFLARE_API_KEY=123 \
-  quay.io/iotec-gmbh/nginx-certbot
+  ghcr.io/iotec-gmbh/docker-nginx-certbot:master
 ```
 
 
