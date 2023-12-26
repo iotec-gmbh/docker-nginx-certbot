@@ -13,8 +13,7 @@ RUN apk --no-cache add \
     openssl-dev \
     python3 \
     python3-dev \
-    py3-pip \ 
-    py3-virtualenv
+    py3-pip
 RUN pip3 install --no-cache-dir --break-system-packages --upgrade pip \
     && pip3 install --no-cache-dir --break-system-packages \
     certbot \
